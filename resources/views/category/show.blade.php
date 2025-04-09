@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="container">
-  <h1>{{ $viewData['category']->name }}</h1>
-  <p>{{ $viewData['category']->description }}</p>
+  <h1>{{ $viewData['category']->getName() }}</h1>
+  <p>{{ $viewData['category']->getDescription() }}</p>
 
   <h3>Associated Products</h3>
   <ul>
     @foreach ($viewData['associatedProducts'] as $product)
-    <li>{{ $product->name }} - ${{ $product->price }}</li>
+    <li>{{ $product->getName() }} - ${{ $product->getPrice() }}</li>
     @endforeach
   </ul>
 

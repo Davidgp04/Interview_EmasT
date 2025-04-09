@@ -28,9 +28,9 @@
             <td>{{ $product->stock }}</td>
             <td>{{ $product->category->name ?? 'N/A' }}</td>
             <td>
-                <a href="{{ route('products.show', $product->id) }}" class="btn btn-sm btn-info">View</a>
-                <a href="{{ route('products.edit', $product->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                <form action="{{ route('products.delete', $product->id) }}" method="POST" class="d-inline"
+                <a href="{{ route('products.show', $product->getId()) }}" class="btn btn-sm btn-info">View</a>
+                <a href="{{ route('products.edit', $product->getId()) }}" class="btn btn-sm btn-warning">Edit</a>
+                <form action="{{ route('products.delete', $product->getId()) }}" method="POST" class="d-inline"
                     onsubmit="return confirm('Are you sure?');">
                     @csrf
                     @method('DELETE')

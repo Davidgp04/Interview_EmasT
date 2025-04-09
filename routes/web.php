@@ -4,9 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 $productControllerRoute = "App\Http\Controllers\ProductController";
 $categoryControllerRoute = "App\Http\Controllers\CategoryController";
-Route::get('/', function () {
-    return view('welcome');
-});
+$homeControllerRoute = "App\Http\Controllers\homeController";
+Route::get('/', [$homeControllerRoute, 'home'])->name('home');
 
 Route::get('/products', [$productControllerRoute, 'index'])->name('products.index');
 Route::get('/products/create', [$productControllerRoute, 'create'])->name('products.create');

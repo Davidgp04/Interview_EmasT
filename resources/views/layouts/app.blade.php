@@ -11,11 +11,27 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-    <div class="container">
-      <a class="navbar-brand" href="{{ route('products.index') }}">Product Manager</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="#">MyShop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link {{ request()->routeIs('product.index') ? 'active' : '' }}"
+            href="{{ route('products.index') }}">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ request()->routeIs('category.index') ? 'active' : '' }}"
+            href="{{ route('category.index') }}">Categories</a>
+        </li>
+      </ul>
     </div>
   </nav>
+
 
   <div class="container">
     @if(session('success'))

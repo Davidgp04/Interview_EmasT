@@ -16,25 +16,25 @@
 
   <div class="mb-3">
     <label>Description:</label>
-    <textarea name="description" class="form-control">{{ $viewData['product']->description }}</textarea>
+    <textarea name="description" class="form-control">{{ $viewData['product']->getDescription() }}</textarea>
   </div>
 
   <div class="mb-3">
     <label>Price ($):</label>
-    <input type="number" step="0.01" name="price" class="form-control" value="{{ $viewData['product']->price }}" required>
+    <input type="number" step="0.01" name="price" class="form-control" value="{{ $viewData['product']->getPrice() }}" required>
   </div>
 
   <div class="mb-3">
     <label>Stock:</label>
-    <input type="number" name="stock" class="form-control" value="{{ $viewData['product']->stock }}" required>
+    <input type="number" name="stock" class="form-control" value="{{ $viewData['product']->getStock() }}" required>
   </div>
 
   <div class="mb-3">
     <label>Category:</label>
     <select name="category_id" class="form-control">
       @foreach ($viewData['categories'] as $category)
-      <option value="{{ $category->id }}" {{ $viewData['product']->category_id == $category->id ? 'selected' : '' }}>
-        {{ $category->name }}
+      <option value="{{ $category->id }}" {{ $viewData['product']->category_id == $category->getId() ? 'selected' : '' }}>
+        {{ $category->getName() }}
       </option>
       @endforeach
     </select>

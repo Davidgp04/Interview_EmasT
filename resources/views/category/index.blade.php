@@ -20,9 +20,9 @@
         <td>{{ $category->name }}</td>
         <td>{{ $category->description }}</td>
         <td>
-          <a href="{{ route('category.show', $category->id) }}" class="btn btn-info btn-sm">View</a>
-          <a href="{{ route('category.edit', $category->id) }}" class="btn btn-warning btn-sm">Edit</a>
-          <form action="{{ route('category.delete', $category->id) }}" method="POST" style="display:inline;">
+          <a href="{{ route('category.show', $category->getId()) }}" class="btn btn-info btn-sm">View</a>
+          <a href="{{ route('category.edit', $category->getId()) }}" class="btn btn-warning btn-sm">Edit</a>
+          <form action="{{ route('category.delete', $category->getId()) }}" method="POST" style="display:inline;">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger btn-sm"
