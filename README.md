@@ -11,8 +11,8 @@
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/ scaledhangar
-   cd scaledhangar
+   git clone https://github.com/Davidgp04/Interview_EmasT.git
+   cd Interview_EmasT
    ```
 
 2. **Instalar dependencias**:
