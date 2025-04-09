@@ -71,4 +71,7 @@ php artisan serve
   - Admin: admin@mail.com / admin123
 ---
 
-   
+
+
+   ![image](https://github.com/user-attachments/assets/f66386e5-3064-460a-80c2-f51921647383)
+
